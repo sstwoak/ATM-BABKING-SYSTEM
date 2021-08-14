@@ -1,0 +1,115 @@
+#include<stdio.h>
+
+#include<string.h>
+void atm(int p)
+{
+int i,j,k,m,n,o,q,r,s;
+i=p;
+printf("\n############\n");
+printf("1...cash withdraw...\n",1);
+printf("2...pin generate...\n",2);
+printf("3...statement request...\n",3);
+printf("4...link aadhar...\n",4);
+printf("5...mobile number updation\n",5);
+printf("6...balance enquiry\n",6);
+printf("enter the num which u want:");
+scanf("%d",&j);
+switch(j)
+{
+case1:cash:
+printf("\npls enter the amount...");
+scanf("%d",&k);
+if(k%500==0)
+{
+printf("\npls collect the cash");
+}
+else
+{
+printf("\npls enter the amount in 500 or 2000");
+
+}
+break;
+case 2:
+form:
+printf("\npls enter the  new pin:");
+scanf("%d",&m);
+if(i!=m)
+{
+printf("your pin is successfully updated");
+}
+else if(i==m)
+{
+printf("your pin same as old pls change it:");
+goto form;
+}
+break;
+case 3:
+printf("enter the date u want");
+scanf("%d",&n);
+if(n==3)
+{
+printf("your statement is.....");
+}
+else
+{
+printf("your data is....");
+}
+break;
+case 4:
+aadhar:
+printf("pls enter the aadhar number...\n");
+scanf("%d",&o);
+printf("pls conform your aadhar number...\n");
+scanf("%d",&q);
+if(o==q)
+{
+printf("aadhar linked succesfully\n");
+}
+else
+{
+printf("pls re-enter your aadhar \n");
+goto aadhar;
+}
+break;
+case 5:
+mobile:
+printf("please enter your mobile number:");
+scanf("%d",&r);
+printf("please enter your pin:");
+scanf("%d",&s);
+if(i==s)
+{
+printf("mobile number update successfully");
+}
+else
+{
+printf("please re-enter your pin...\n");
+goto mobile;
+}
+break;
+case 6:
+printf("your balance is 56.54");
+break;
+}
+}
+int main()
+{
+int i;
+printf("PLEASE INSERT THE CARD");
+printf("\nPLEASE ENTER THE PIN:");
+scanf("%d",&i);
+int y;
+atm(i);
+printf("\nDO YOU WANT CONTINUE....YES=1 or NO=0\n");
+if(y==1)
+{
+atm(i);
+}else 
+{
+printf("THANK YOU FOR VISITING");
+}
+}
+
+
+
+
